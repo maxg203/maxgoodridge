@@ -1,0 +1,225 @@
+/*Make navbar links scroll to correct place*/
+.scroll-buffer { /*For the main navbar buttons*/
+  padding-top:30px;
+  margin-top:-30px;
+}
+
+.scroll-buffer-l { /*For the navbar buttons in the dropdown*/
+    padding-top: 50px;
+    margin-top: -50px;
+}
+
+/*Move page down to make space for the navbar*/
+body {
+    padding-top: 50px;
+    background-color: black;
+    color: white;
+    /*font-family: 'Asap', sans-serif;*/
+}
+
+#my-name {
+    font-size: 8vw;
+    color: white;
+}
+
+#my-roll {
+    font-size: 30px;
+    color: white;
+}
+
+#my-intro {
+    color: white;
+}
+
+#panda-text {
+    color: grey;
+    font-size: 8vw;
+}
+
+#panda-coming-soon {
+    color: black;
+}
+
+.asap-font {
+    font-family: 'Asap', sans-serif;
+}
+
+/*Make any paragraph text look better by fixing alignment*/
+p.center {
+    text-align: justify;
+}
+
+/*For larger text in faq, first panel near the bottom*/
+p.large {
+    font-size: 22px;
+}
+
+/*All main buttons*/
+.btn.outline {
+    background: none;
+    padding: 12px 22px;
+}
+
+.btn.outline:hover {
+    padding: 12px 22px;
+}
+
+/*Facebook/CV button*/
+.btn-primary.outline {
+    border: 2px solid #00a2ff;
+    color: #00a2ff;
+    background: rgba(0, 0, 0, 0.5);
+
+}
+
+.btn-primary.outline:hover {
+    border: 2px solid #00a2ff;
+    color: #ffffff;
+    background: #00a2ff;
+}
+
+/*YouTube button*/
+.btn-danger.outline {
+    color: red;
+    border: 2px solid red;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.btn-danger.outline:hover {
+    border: 2px solid red;
+    color: #ffffff;
+    background: red;
+}
+
+/*Instagram button*/
+.btn-warning.outline {
+    color: orange;
+    border: 2px solid orange;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.btn-warning.outline:hover {
+    border: 2px solid orange;
+    color: #ffffff;
+    background: orange;
+}
+
+/*Stack Exchange button*/
+.btn-info.outline {
+    color: #4dc3ff;
+    border: 2px solid #4dc3ff;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.btn-info.outline:hover {
+    border: 2px solid #4dc3ff;
+    color: #ffffff;
+    background: #4dc3ff;
+}
+
+/* GitHub button */
+.btn-success.outline {
+    color: #d6d6d6;
+    border: 2px solid #d6d6d6;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.btn-success.outline:hover {
+    border: 2px solid #d6d6d6;
+    color: #000000;
+    background: #d6d6d6;
+}
+
+/* Support link */
+.btn-support.outline {
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0);
+}
+
+.btn-support.outline:hover {
+    color: #000000;
+    background: #ffffff;
+}
+
+.buffer .btn {
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+/*Custom button values*/
+
+.btn {
+    padding: 14px 24px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}
+
+/*Jumbotron background*/
+
+.jumbotron {
+    background-image: url(../images/code.jpg);
+    background-color: black;
+    background-size: cover;
+    color: white;
+}
+.jumbo-wrapper {
+    position: relative;
+}
+
+/*Change tiny text colour near top of the page*/
+.tiny-quote {
+    color: grey;
+}
+
+#intro {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  background-color: #000;
+}
+
+#intro h3 {
+  position: absolute;
+  font-family: 'Asap', sans-serif;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  visibility: hidden;
+  font-size: 25vw;
+  top: 65px;
+}
+
+.my-image img {
+    position: relative;
+    margin-top: -12px;
+    margin-bottom: 12px;
+}
+
+.my-image img:hover {
+    padding: inherit;
+    margin-top: -24px;
+    margin-bottom: 24px;
+}
+
+/* Responsive Google Maps size */
+.google-maps {
+    position: relative;
+    padding-bottom: 60%; /* This is the aspect ratio */
+    height: 0;
+    overflow: hidden;
+}
+.google-maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}

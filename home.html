@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" name="Max Goodridge" content="Portfolio">
+	<title>Max Goodridge</title>
+	<link href='http://fonts.googleapis.com/css?family=Asap:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/about.css" title="main" charset="utf-8">
+	<link rel="stylesheet" href="css/lightbox.css" title="main" charset="utf-8">
+    <link rel="shortcut icon" type="image/ico" href="images/favicon.ico"/>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+</head>
+
+<body data-spy="scroll" data-target="#my-navbar">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<div id="intro"></div>
+	<div id="main">
+  	<nav class="navbar navbar-default navbar-fixed-top" id="my-navbar">
+  		<div class="container">
+			<div class="navbar-header">
+		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+              <a class="navbar-brand" href="/"><img alt="MG" src="images/favicon.ico"></a>
+		    </div>
+			<div id="navbar" class="navbar-collapse collapse">
+	          <ul class="nav navbar-nav">
+				  <li><a href="#funfacts">Fun Facts</a></li>
+				  <li class="dropdown">
+					  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects <span class="caret"></span></a>
+					  <ul class="dropdown-menu">
+						  <li class="dropdown-header">Web</li>
+						  <li><a href="#mvp-landing">MVP Landing</a></li>
+						  <li><a href="#tribute-page">Tribute Page</a></li>
+						  <li role="separator" class="divider"></li>
+						  <li class="dropdown-header">Mobile</li>
+						  <li><a href="#flip-crash-app">Flip Crash</a></li>
+						  <li role="separator" class="divider"></li>
+						  <li class="dropdown-header">Desktop</li>
+						  <li><a href="#grapher">Graphing Utility</a></li>
+					  </ul>
+				  </li>
+				  <li><a href="#favourites">Favourites</a></li>
+				  <li><a href="#faq">FAQ</a></li>
+	          </ul>
+	          <ul class="nav navbar-nav navbar-right">
+                  <li><a href="{% url 'admin:index"><i class="fa fa-sign-in"></i> Log In</a></li>
+	          </ul>
+	        </div>
+  		</div>
+  	</nav>
+  	<div class="jumbotron" id="top">
+  		<div class="container text-center" id="top-text">
+			<h1 class="asap-font" id="my-name">Max Goodridge</h1>
+			<h2 class="asap-font" id="my-roll">Software Engineer</h2>
+  			<p id="my-intro">Welcome to my digital portfolio. This is where I showcase all the cool stuff
+				 that I have enjoyed working on recently and I share a little bit about my
+				 personal life too.</p>
+
+  			<div class="btn-group buffer">
+				<center>
+  				<a href="https://www.facebook.com/maxg203" class="btn btn-lg btn-primary outline" target="_blank" id="facebook"><i class="fa fa-facebook-square" aria-hidden="true"></i> Facebook</a>
+  				<a href="http://youtube.maxgoodridge.com" class="btn btn-lg btn-danger outline" target="_blank" id="youtube"><i class="fa fa-youtube-play" aria-hidden="true"></i> YouTube</a>
+  				<a href="https://www.instagram.com/maxg303/" class="btn btn-lg btn-warning outline" target="_blank" id="instagram"><i class="fa fa-instagram" aria-hidden="true"></i> Instagram</a>
+  				<a href="https://www.stackoverflow.com/users/4548304/max-goodridge?tab=profile" class="btn btn-lg btn-info outline" target="_blank" id="se"><i class="fa fa-stack-overflow" aria-hidden="true"></i> Stack Overflow</a>
+				<a href="http://www.github.com/maxg203" class="btn btn-lg btn-success outline" target="_blank" id="github"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
+  				<a href="http://docs.maxgoodridge.com" class="btn btn-lg btn-primary outline" target="_blank" id="facebook"><i class="fa fa-book" aria-hidden="true"></i> Docs</a>
+				</center>
+  			</div>
+
+  			<div class="btn-group buffer">
+				<center>
+				<a href="https://www.paypal.me/maxgoodridge" class="btn btn-lg btn-support outline" target="_blank"><i class="fa fa-money" aria-hidden="true"></i> Support</a>
+				</center>
+  			</div>
+			<br><br>
+  		</div>
+  	</div>
+
+  	<div class="container scroll-buffer" id="funfacts">
+  		<section>
+			<div class="page-header">
+                <h2><a href="https://www.strava.com/athletes/maxgoodridge">Running Data</a></h2>
+            </div>
+            <div class="col-sm-4">
+                <h4>Last 4 Weeks</h4>
+                <div id="recent_run_totals"></div>
+            </div>
+            <div class="col-sm-4">
+                <h4>This Year</h4>
+                <div id="ytd_run_totals"></div>
+            </div>
+            <div class="col-sm-4">
+                <h4>All Time</h4>
+                <div id="all_run_totals"></div>
+            </div>
+        </section>
+    </div>
+
+  	<div class="container scroll-buffer" id="funfacts">
+  		<section>
+			<div class="page-header">
+				<div class="my-image" id="image">
+                    <a href="images/pp.jpg" data-lightbox="pp-modal" data-title="">
+						<img src="images/pp.jpg" alt="Profile Picture" class="img-circle pull-right col-xs-2 col-md-1" id="pp"/>
+					</a>
+				</div>
+  				<h2>Fun Facts<br><small>Here's some fun facts about me. At least, I think they're fun. I guess you'll just have to read them to find out!</small></h2>
+  			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<h1>Techie Firsts</h1>
+				</div>
+			</div>
+
+  			<div class="row">
+  				<div class="col-md-4">
+					<h3>First Coding Experience</h3>
+					<p class="center">
+  						The first developer environment I used was Microsoft Visual C++ 2010 Express because
+  						first language I <i>tried</i> to learn was C++ using <a href="https://www.youtube.com/playlist?list=PL1D10C030FDCE7CE0">
+						this tutorial series</a>. I'm not criticising the tutorial series, but I think I was about 12 years
+						old at the time so I'll leave you to guess how that went! I've embedded the first programming tutorial I ever
+						watched if you're interested:
+					</p>
+					<center>
+						<iframe src="https://www.youtube.com/embed/tyVhn0FWWB4" frameborder="0" allowfullscreen></iframe>
+					</center><br>
+					<p class="center">
+						I chose C++ at first because at the time I
+						knew of nothing that I could compare it to in terms of its syntax and general suitability for beginners.
+						That is why I soon switched to Python as my go to language. To this day I think it is a great language.
+  					</p>
+  				</div>
+  				<div class="col-md-4">
+					<h3>First Computer</h3>
+					<p class="center">
+  						The first computer I owned was a Dell Inspiron B130 (which was old at the time) and I
+						thought it was broken at first because the battery was flat and barely held its charge!
+						When I obtained the device, it only had a mere 256MB of RAM - so it quickly became the
+						victim of my first RAM upgrade! I maxed it out with a mighty 2GB of Crucial memory. The
+						difference was really night and day.
+  					</p>
+					<a href="images/laptop.jpg" data-lightbox="laptop-modal" data-title="">
+						<img src="images/laptop.jpg" alt="Laptop" class="img-responsive"/>
+					</a>
+					<p class="center">
+						That was when I first started to fall in love with computer science - I would spend hours editing my photos on Gimp (a free alternative to Photoshop). I would create accounts on any and almost all websites I came across so that I could experience the true power of the Web 2.0 (a.k.a. "the interactive web") and I've been loving it ever since. Yes, I'm a geek. I know.
+					</p>
+  				</div>
+  				<div class="col-md-4">
+					<h3>First Real Project</h3>
+					<p class="center">
+						The first piece of software that I wrote that actually had any real substance in
+						my opinion was <a href="#grapher">the graphing utility</a>.
+						I mainly just used <a href="https://www.python.org">Python</a> and
+						<a href="http://www.pygame.org/download.shtml">pygame</a>. Later on I reused and enhanced
+						the software substantially as part of my A level computing coursework.
+					</p>
+					<a href="images/grapher.jpg" data-lightbox="grapher-modal" data-title="">
+						<img src="images/grapher.jpg" alt="Grapher" class="img-responsive"/>
+					</a><br>
+					<p class="center">
+						I decided to rewrite it from the ground up due to the quantity of documentation that was required as
+						well as there being many things I wanted to do differently.
+					</p>
+  				</div>
+  			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<h2><small>I just love to build cool stuff. It's that simple.</small></h2>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-xs-12">
+					<h1>Travelling</h1>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-4">
+					<h3>Silicon Valley</h3>
+					<p class="center">
+						It has always been a dream of mine to go to America. When I was young I thought that everything was just bigger and better. I've since realised that the United States (especially the San Francisco bay area) can provide a wealth of opportunity that is simply not available to the same extent from anywhere else in the world.
+					</p>
+					<p class="center">
+						I flew out to San Francisco on 30th June 2016 and I love being able to meet so many inspirational people in the industry. The other huge advantage about being here is that I get to surround myself with other people who code. This only motivates me to work harder and collaborate more effectively.
+					</p>
+					<div class="google-maps">
+						<iframe src= "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d449042.5335197182!2d-122.30228463569685!3d37.585277159784376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2suk!4v1465734983081" frameborder="1" style="border:0" allowfullscreen></iframe>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<h3>Danish Jamboree</h3>
+					<p class="center">
+						<a href="images/denmark.jpg" data-lightbox="denmark-modal" data-title="">
+							<img src="images/denmark.jpg" alt="Denmark" class="img-responsive"/>
+						</a><br>
+						I was a part of the scouts from a young age, but never was it more exciting for me than when my scout troop got the incredible opportunity to go travelling to Denmark from England to meet <i>over 30,000 scouts</i> from around the world for a week in a vast international event. Not only that, we got to spend another week or so in a Danish homestay experiencing a new culture and meeting some really brilliant people. By the way, <a href="https://www.youtube.com/watch?v=23KTho1Dch4">here's</a> the song for that event (it was certainly fun trying to sing the Danish lyrics)!
+					</p>
+				</div>
+				<div class="col-md-4">
+					<h3>Expedition</h3>
+					<p class="center">
+						Having had an early morning paper round for over five years - largely to save up to be able to go on expedition, I was able to
+						fund my place on an expedition to Laos and Thailand in the summer of 2014, which was undoubtedly one of the most significant periods of
+						my life. The whole trip and the opportunity to teach English to Laos' children taught me so much about our materialistic
+						values and lack of appreciation of our comparative privilege. We stayed in an old classroom in the village,
+						when I had some free time I covered the chalk boards with some good old proof by induction and taught some times tables too!<br>
+					</p>
+					<a href="images/exped.jpg" data-lightbox="exped-modal" data-title="">
+						<img src="images/exped.jpg" alt="Expedition" class="img-responsive"/>
+					</a>
+				</div>
+
+			</div>
+  		</section>
+  	</div>
+	<div class="container">
+		<section>
+			<div class="page-header">
+  				<h2>Projects<br><small>
+					Here are some of the best things that I have
+					created so far in my opinion (in no particular order).
+					<br>
+					<i><strong>I can't wait for you to see what I'm working on right now!</strong></i>
+				</small></h2>
+  			</div>
+			<div class="row scroll-buffer-l" id="mvp-landing">
+				<div class="col-sm-6">
+					<a href="images/mvp.jpg" data-lightbox="mvp-modal">
+						<img src="images/mvp.jpg" class="img-responsive" alt="mvp-landing">
+					</a>
+				</div>
+  				<div class="col-sm-6">
+  					<h3>MVP Landing Page</h3>
+  					<p class="center">
+						This was a really neat project in itself because using the Django web framework for Python I was able to create a module seperate from the rest of the program that could do one specific thing very well.
+					</p>
+					<p class="center">
+						In this case, it was an "Email List" module. That form in the upper right of the website would take users names and emails. It then validates and appropriately formats the data ready for entry in to the database. Using Django models means that a new database table will automatically be created by Django in whichever Django compatible database technology that you want to use.
+					</p>
+					<p class="center">
+						Django generates all the SQL for you so all you have to do is install the app in your Django project and you're pretty much good to go with your own personal email sign up form which can automatically collect the users full name and email and save it to your database for marketing or public anouncements.
+					</p>
+					<br>
+					<center><a href="https://github.com/maxg203/mvp-landing" class="btn btn-success" target="_blank" >View on GitHub</a></center>
+  				</div>
+  			</div>
+			<hr>
+  			<div class="row scroll-buffer-l" id="tribute-page">
+  				<div class="col-sm-6">
+  					<h3>Guido Van Rossum Tribute Page</h3>
+  					<p class="center">
+						<a href="https://en.wikipedia.org/wiki/Guido_van_Rossum">Guido Van Rossum</a>, for those of you that don't already know, invented the Python programming language.
+						It also happens to be the first programming language I learned as well as the best overall language
+						for beginners to learn in my opinon. Not everyone deserves their own tribute page, but this man
+						<i>certatinly</i> does!
+					</p>
+					<p class="center">
+						Now granted, this was one of the very first projects I ever made and as a result you can see that it's
+						extremely simple. That said, it does demonstrate that even back when I made that project I could effectively
+						use <a href="http://www.getbootstrap.com">bootstrap</a> to make a simple web page very fast (it took only about
+						30 minutes or so). I do also like to leave this up for people to see as a demonstration that everyone has to
+						start somewhere!
+					</p>
+					<p class="center">
+						Click on Van Rossum's face or the following link to be taken to the codepen.
+					</p>
+					<br>
+					<center><a href="https://codepen.io/maxg203/full/YWXzpy/" class="btn btn-success" target="_blank" >View on Codepen</a></center>
+  				</div>
+  				<div class="col-sm-6">
+  					<a href="https://codepen.io/maxg203/full/YWXzpy/"><img src="images/rossum.jpg" class="img-responsive" alt="rossum"></a>
+  				</div>
+  			</div>
+			<hr>
+  			<div class="row scroll-buffer-l" id="flip-crash-app">
+  				<div class="col-sm-6">
+					<a href="https://itunes.apple.com/us/app/flip-crash/id1032532002?mt=8"><img src="images/flipcrash.jpg" class="img-responsive" alt="image"></a>
+  				</div>
+  				<div class="col-sm-6">
+					<h3>Flip Crash</h3>
+  					<p class="center">
+						I really enjoyed making this app because it was one of my first real ventures in to the world of mobile game development.
+						I have encourporated Game Center leaderboards so it uses your Apple ID to connect with your Game Center friends and that
+						then allows you to compare high scores and see where you stand in the world rankings.
+					</p>
+					<p class="center">
+						It was a priority for me right from the start of this project to make sure that it was optimised and worked well for
+						both iPhone <i>and</i> iPad. Personally, even though iOS does now do a good job with upscaling unoptimised apps I'd
+						certainly rather this app not be one of them.
+					</p>
+					<p class="center">
+						I hope you enjoy playing this game, and if you don't then at least you'll probably have beaten my highscore!
+					</p>
+					<br>
+					<center><a href="https://itunes.apple.com/us/app/flip-crash/id1032532002?mt=8" class="btn btn-success" target="_blank">View App</a></center>
+  				</div>
+				<hr>
+  			</div>
+			<hr>
+  			<div class="row scroll-buffer-l" id="grapher">
+  				<div class="col-sm-4">
+  					<h3>Personal Graphing Utility</h3>
+  					<p class="center">
+						This was a Python project that I built for fun to be able to graph common mathematical equations in a nice intuitive way
+						and with a simple but functional user interface and user experience.
+					</p>
+					<p class="center">
+						I personally think that anyone should be able to have their very own graphing utility which they can customise however they'd like.
+					</p>
+					<p class="center">
+						This was a really neat project and I showcase this one
+						in particular because I remember it specifically for it being the one where I finally began to understand what it meant to
+						write great, object-oriented code in a practical environment to accomplish a specific task.
+					</p>
+					<p class="center">
+						I believe I am one of many developers who believe that everything within reason should be open source. So in the support of
+						the brilliant open source programming community, you can see this project on GitHub.
+					</p>
+					<br>
+					<center><a href="https://github.com/maxg203/GraphingUtility" class="btn btn-success" target="_blank" >View on GitHub</a></center><br>
+  				</div>
+  				<div class="col-sm-8">
+  					<a href="https://github.com/maxg203/GraphingUtility"><img src="images/grapher.jpg" class="img-responsive" target="_blank" alt="image"></a>
+  				</div>
+  			</div>
+
+		</section>
+	</div>
+	<div class="container scroll-buffer" id="favourites">
+		<section>
+					<br>
+					<h2>Favourites Right Now<br><small>These are in order so my favourite favourites are at the top.</small></h2>
+					<hr>
+		  			<div class="row">
+		  				<div class="col-sm-4">
+		  					<div class="panel panel-default text-center">
+		  						<div class="panel-body">
+		  							<i class="fa fa-5x fa-youtube-play" aria-hidden="true"></i>
+		  							<h4>Favourite YouTubers</h4>
+		  							<p>
+										<a href="https://www.youtube.com/channel/UCU1iJ2ChGwaNLvBjip0p2Ag" target="_blank">Christian Guzman</a><br>
+										<a href="https://www.youtube.com/channel/UCXuqSBlHAE6Xw-yeJA0Tunw">Linus Tech Tips</a><br>
+										<a href="https://www.youtube.com/user/learncodeacademy/featured">LearnCode.academy</a><br>
+										<a href="https://www.youtube.com/channel/UCoxcjq-8xIDTYp3uz647V5A">Numberphile</a><br>
+										<a href="https://www.youtube.com/channel/UCfzlCWGWYyIQ0aLC5w48gBQ">Sentdex</a>
+									</p>
+									<p>
+										<small>They all post fantastic, reliable content.</small>
+									</p>
+		  						</div>
+		  					</div>
+		  				</div>
+
+		  				<div class="col-sm-4">
+		  					<div class="panel panel-default text-center">
+		  						<div class="panel-body">
+		  							<i class="fa fa-5x fa-code" aria-hidden="true"></i>
+		  							<h4>Favourite Frameworks</h4>
+		  							<p>
+										<a href="https://www.djangoproject.com/">Django</a><br>
+										<a href="http://getbootstrap.com/">Bootstrap</a><br>
+										<a href="https://jquery.com">jQuery</a><br>
+										<a href="http://fontawesome.io/">Font Awesome</a><br>
+										<a href="https://facebook.github.io/react/">React</a>
+									</p>
+									<p>
+										<small>What's your favourite? Let me know!</small>
+									</p>
+		  						</div>
+		  					</div>
+		  				</div>
+
+		  				<div class="col-sm-4">
+		  					<div class="panel panel-default text-center">
+		  						<div class="panel-body">
+		  							<i class="fa fa-5x fa-mobile" aria-hidden="true"></i>
+		  							<h4>Favourite Platforms</h4>
+		  							<p>
+										<a href="https://trello.com/">Trello</a><br>
+										<a href="https://www.coursera.org/">Coursera</a><br>
+										<a href="https://www.airbnb.co.uk/">Airbnb</a><br>
+										<a href="https://plex.tv/">Plex</a><br>
+										<a href="http://stackexchange.com/users/5762298/max-goodridge">Stack Exchange</a>
+									</p>
+									<p>
+										<small>All these platforms have iOS apps that are free to download!</small>
+									</p>
+		  						</div>
+		  					</div>
+		  				</div>
+		  			</div>
+            </section>
+        </div>
+        <div class="container scroll-buffer" id="faq">
+          <section>
+            <div class="page-header">
+              <h2>FAQ<br><small>It's good to ask questions. If you happen to have one, I promise that I will respond as soon as possible.</small></h2>
+            </div>
+
+            <div class="panel-group" id="accordion">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <div class="panel-title">
+                    <a href="#collapse-1" data-toggle="collapse" data-parent="#accordion">
+                      What are your favourite resources or recommendations for beginners who want to learn to write code?
+                    </a>
+                      </div>
+                  <div id="collapse-1" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <p>
+                        I think that the <a href="https://www.codecademy.com/learn/python">Python course on Codecademy</a>
+                          is a fantastic place to start because you don't have to download anything and it really seems to
+                          guide you through the process, even offering hints for when you get stuck.
+                        </p>
+                        <p>
+                            If for some reason you'd prefer not to learn Python, my second language of choice for beginners would
+                            be <a href="http://www.javascript.com">JavaScript</a>. This is now commonly referred to as "the universal
+                            language of the web" becuase of its mass adoption by many major tech companies and professionals,
+                            as well as the fact that all modern browsers can understand and run it. Web development is the place to be
+                            these days, but you can of course do web development in Python as well.
+                        </p>
+                        <p>
+                      If you feel a little more confident, or want to try writing some code outside of the browser, I
+                      think that YouTube is the best resource by far. Specifically, my favourite series is called
+                      <a href="https://www.youtube.com/playlist?list=PLQVvvaa0QuDe8XSftW-RAxdo6OmaeL85M">Python 3 Basics Tutorial Series</a>
+                      which is by a guy called Harrison Kinsley. He also does some much more advanced tutorials which I
+                      also love. I should probably add that I'm not affiliated with him or his site in any way. Some other good
+                      tutorials for Python are <a href="https://www.youtube.com/playlist?list=PL6gx4Cwl9DGAcbMi1sH6oAMk4JHw91mC_">here</a>,
+                      <a href="https://www.youtube.com/watch?v=N4mEzFDjqtA">here</a> and
+                      <a href="https://www.youtube.com/watch?v=cpPG0bKHYKc">here</a>.
+                  </p>
+                  <p>
+                    With all that said, just because I learnt Python first does not mean that you have to as well. Technologies are
+                    changing all the time and tomorrow there may well be something even better for beginners than what I have suggested.
+                    Honestly though, I wouldn't spend too much time choosing a language because if you just pick one and manage to learn
+                    how to program (which won't happen overnight, so just keep working at it if you haven't got there yet) using that language
+                    then 90% of the skills you've learnt will be transferrable to any other popular language. So the bottom line - choose a
+                    language and stick with it until you can code.
+                  </p>
+                  <p>
+                    Just a final sidenote; <strong><i>if you find projects to work on that you are really passionate about, you will learn much faster</i></strong> and much more
+                    easily than if you were to think about programming like you do your other tedious work that you've been putting off for ages.
+                </p><hr>
+                <center>
+                  <h1>Attention Learners</h1>
+                  <p class="large">If you want to talk tech or collaborate on your new GitHub project, don't hesitate to send me a message!<br><br>
+                       I <i>love</i> to hear about all of the fantastic projects you people are working on and I certainly learn a lot too.</p>
+                  <p>
+                    <small>If you haven't heard of Git or GitHub before - that's fine. If you're willing to learn, I would be more than willing to help you out.</small>
+                  </p>
+              </center>
+                    </div>
+                  </div>
+            </div>
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <div class="panel-title">
+                <a href="#collapse-2" data-toggle="collapse" data-parent="#accordion">
+                  Is it true that you are a fluent Russian speaker?
+                </a>
+              </div>
+              <div id="collapse-2" class="panel-collapse collapse">
+                <div class="panel-body">
+					<p>
+						Erm... no. I did do a Russian GCSE in secondary school though and I thought that it would have been a complete waste of
+	  				  time if I didn't carry it on so long story short <i>I do</i> like to read, write and learn Russian when I can but I am still a terrible
+	  				  Russian speaker and I can't understand actual Russian people because they speak so fast! Seriously, I swear they speak faster
+	  				  in general than native English speakers do.
+					</p>
+				  <p>
+				  	That said, I love the language and I would recommend it to anyone who would like to expand and diversify their skill set. I made
+					<a href="http://www.writerussian.wordpress.com">a Russian blog</a> where I attempt to write in Russian occasionally. Sorry in advance if
+					I haven't updated that in a while because I am ridiculously slow at typing in Russian on an English keyboard and I find that rather
+					frustrating, so that's mainly why. If you
+					want to learn with me, <a href="http://www.writerussian.wordpress.com/resources">check out these resources</a>.
+				  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <div class="panel-title">
+                <a href="#collapse-3" data-toggle="collapse" data-parent="#accordion">
+                  If you ask me a question, I might end up putting it here!
+                </a>
+              </div>
+              <div id="collapse-3" class="panel-collapse collapse">
+                <div class="panel-body">
+					Ask me anything. Within reason. Or not. Whatever. I'm open-minded. Try me.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </div>
+
+    <footer>
+      <hr>
+	  <center>
+		<h1><small>I tend to respond fastest if you message me via Facebook.</small></h1>
+		<h1>See you again soon.</h1>
+        <ul class="list-inline">
+          <li><a href="http://www.facebook.com/max.goodridge">Facebook</a></li>
+          <li><a href="https://www.youtube.com/channel/UCAx4nmhI7S1RcPiaG-Uw0tg">YouTube</a></li>
+          <li><a href="http://www.instagram.com/maxg303">Instagram</a></li>
+		  <li><a href="https://www.stackoverflow.com/users/4548304/max-goodridge?tab=profile">Stack Exchange</a></li>
+		  <li><a href="http://www.github.com/maxg203">GitHub</a></li>
+		  <li><a href="cv.pdf">CV</a></li>
+        </ul>
+
+        <p>&copy; Copyright 2016</p>
+
+      </div>
+
+		</center>
+    </footer>
+
+	</div>
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="https://code.jquery.com/color/jquery.color-2.1.2.min.js" integrity="sha256-H28SdxWrZ387Ldn0qogCzFiUDDxfPiNIyJX7BECQkDE=" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/3ced957014.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+	<script src="js/lightbox.min.js"></script>
+	<script src="js/main.js"></script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-96650275-2', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>
