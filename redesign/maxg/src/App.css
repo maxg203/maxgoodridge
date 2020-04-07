@@ -1,0 +1,109 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  height:100%;
+}
+
+.top-section {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #24252A;
+
+  height: 500px;
+}
+
+.home {
+  background-color: #24252A;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7)
+  ), url('./background.jpg');
+  background-size: cover;
+}
+
+a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+
+li, .navlink, button {
+  font-family: Lato, sans-serif;
+  font-weight: lighter;
+  font-size: 16pt;
+  color: #ecf0f1;
+  text-decoration: none;
+  padding-left: 5px;
+  /* padding-right: 2px; */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+}
+
+.navbar-logo {
+  font-size: 24pt;
+  color: #ecf0f1;
+  font-weight: lighter;
+  cursor: pointer;
+  text-transform: uppercase;
+  word-spacing: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease 0s;
+}
+
+.navbar-logo:hover {
+  color: #03ce8e;
+}
+
+.navbar {
+  list-style: none;
+}
+
+.active {
+  font-weight: bold;
+}
+
+.navbar li {
+  display: inline-block;
+  padding-left: 20px;
+}
+
+.navbar li .navlink {
+  /* position: absolute; */
+  transition: all 0.3s ease 0s;
+}
+
+.navbar li .navlink:hover {
+  color: #03ce8e;
+}
+
+.custom-404 {
+  max-width: 500px;
+  align-items: center;
+}
+
+.content-container {
+  color: white;
+  padding: 20px 10%;
+}
+
+.content-container img {
+  max-height: 170px;
+}
+
+.content-container svg {
+  fill: currentColor;
+}
+
+.top-section-subtitle {
+  text-align: center;
+  font-family: Lato, sans-serif;
+  font-weight: lighter;
+  /* padding: 0px 10%; */
+
+}
