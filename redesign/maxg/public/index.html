@@ -24,27 +24,10 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>Max Goodridge</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-
-    <script>
-      function getScrollPercent() {
-        var h = document.documentElement,
-            b = document.body,
-            st = 'scrollTop',
-            sh = 'scrollHeight';
-        return (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100;
-      }
-
-      let scrollPercentage = getScrollPercent();
-      console.log('Scroll percentage: ', scrollPercentage)
-      document.documentElement.style.setProperty('--sp', `${scrollPercentage}`);
-
-      let vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty('--vh', `${vh}px`);
-    </script>
   </body>
 </html>
