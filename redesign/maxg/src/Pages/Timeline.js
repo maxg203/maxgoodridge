@@ -2,6 +2,8 @@ import React from 'react';
 
 import './Timeline.css';
 
+// Inspired by: https://codepen.io/savalazic/pen/QKwERN?editors=0100
+
 
 class Timeline extends React.Component {
   state = {
